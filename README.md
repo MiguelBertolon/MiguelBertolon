@@ -60,10 +60,10 @@ Movido a engrenagens do passado e circuitos do futuro — sou apaixonado por con
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=MiguelBertolon&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000000&title_color=00fff2&icon_color=6a0dad&text_color=ffffff" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=MiguelBertolon&theme=tokyonight&hide_border=true&background=000000&ring=00fff2&fire=6a0dad&currStreakLabel=00fff2&sideLabels=ffffff&dates=ffffff" height="165"/>
+<img src="./assets/stats.svg" height="165"/>
+<img src="./assets/streak.svg" height="165"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiguelBertolon&layout=compact&theme=tokyonight&hide_border=true&bg_color=000000&title_color=00fff2&text_color=ffffff" />
+<img src="./assets/top-langs.svg" />
 
 </div>
 
