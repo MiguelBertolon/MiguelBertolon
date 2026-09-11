@@ -1,0 +1,51 @@
+name: Atualizar estatísticas do README
+
+on:
+  schedule:
+    # Roda todo dia às 06:00 (horário de Brasília, UTC-3 -> 09:00 UTC)
+    - cron: "0 9 * * *"
+  workflow_dispatch: {}   # permite rodar manualmente pela aba Actions
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Criar pasta assets
+        run: mkdir -p assets
+
+      - name: Baixar card de estatísticas gerais
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api?username=MiguelBertolon&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000000&title_color=00fff2&icon_color=6a0dad&text_color=ffffff" -o assets/stats.svg
+
+      - name: Baixar card de streak
+        run: |
+          curl -s "https://github-readme-streak-stats.herokuapp.com/?user=MiguelBertolon&theme=tokyonight&hide_border=true&background=000000&ring=00fff2&fire=6a0dad&currStreakLabel=00fff2&sideLabels=ffffff&dates=ffffff" -o assets/streak.svg
+
+      - name: Baixar card de linguagens
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=MiguelBertolon&layout=compact&theme=tokyonight&hide_border=true&bg_color=000000&title_color=00fff2&text_color=ffffff" -o assets/top-langs.svg
+
+      - name: Verificar se os arquivos são SVGs válidos
+        run: |
+          for f in assets/stats.svg assets/streak.svg assets/top-langs.svg; do
+            if ! head -c 100 "$f" | grep -q "<svg\|<?xml"; then
+              echo "AVISO: $f não parece um SVG válido, mantendo versão anterior."
+              git checkout -- "$f" 2>/dev/null || true
+            fi
+          done
+
+      - name: Commitar mudanças (se houver)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git diff --staged --quiet || git commit -m "chore: atualiza estatísticas do README [automático]"
+          git push
