@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:6a0dad,100:00fff2&height=220&section=header&text=Miguel%20Bertolon&fontSize=55&fontColor=00fff2&animation=fadeIn&fontAlignY=38&desc=Dev%20%7C%20Engrenagens%20%2B%20Circuitos&descAlignY=58&descAlign=62" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&duration=3000&pause=800&color=00FFF2&center=true&vCenter=true&width=650&background=000000&lines=%3E+Bem-vindo+ao+meu+laborat%C3%B3rio;%3E+Engrenagens+girando%2C+dados+fluindo;%3E+Ciencia+da+Computa%C3%A7%C3%A3o+%40+UNIFRAN;%3E+Foco%3A+Banco+de+Dados+%26+Cyberseguran%C3%A7a" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&duration=3000&pause=800&color=00FFF2&center=true&vCenter=true&width=650&lines=%3E+Bem-vindo+ao+meu+laborat%C3%B3rio;%3E+Engrenagens+girando%2C+dados+fluindo;%3E+Ciencia+da+Computa%C3%A7%C3%A3o+%40+UNIFRAN;%3E+Foco%3A+Banco+de+Dados+%26+Cyberseguran%C3%A7a" alt="Typing SVG" />
 
 </div>
 
